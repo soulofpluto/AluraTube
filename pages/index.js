@@ -43,7 +43,6 @@ export default HomePage;
 
 const StyledHeader = styled.div`
   .user-info {
-    margin-top: 50px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -62,6 +61,8 @@ const ImageBanner = styled.img`
   width: 100%;
   height: 230px;
   object-fit: cover;
+  background-image: url(${({ bg }) => bg});
+  // ou é possível colocar como background-image: url(${config.bg}) mas nem sempre haverá um config global mas é possível ter o valor.
 `;
 const ImagePerfil = styled.img`
   width: 80px;
@@ -72,7 +73,7 @@ const ImagePerfil = styled.img`
 function Header() {
   return (
     <StyledHeader>
-      <ImageBanner src={config.banner} />
+      <ImageBanner bg={config.bg} />
       <section className="user-info">
         <ImagePerfil src={`https://github.com/${config.github}.png`} />
         <div>

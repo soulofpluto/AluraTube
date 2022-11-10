@@ -42,6 +42,7 @@ const StyledSearch = styled.div`
 export default function Search({ valorDoFiltro, setValorDoFiltro }) {
     // const [valorDaBusca, setValorDaBusca] = React.useState("Teste");
     // console.log("Search", valorDaBusca)
+    // exportado para o index.js dos comandos
     const valorDaBusca = valorDoFiltro;
     const setValorDaBusca = setValorDoFiltro;
 
